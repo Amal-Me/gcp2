@@ -1,4 +1,15 @@
 # Screenshot Job
+run locally with env var
+
+docker run -e BUCKET_NAME=my-bucket IMAGE_NAME URL
+TODOS
+
+    Copy service account key into container locally, but without versioning it on git (.gitignore)
+    Build and run the application
+    Do whatever necessary to upload the image with the container on the cloud bucket
+
+    role and permissions for the service account
+    create a bucket
 
 Create a Cloud Run job to take screenshots of web pages.
 

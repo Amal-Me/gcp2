@@ -1,7 +1,7 @@
 # Screenshot Job
 run locally with env var
-
 docker run -e BUCKET_NAME=my-bucket IMAGE_NAME URL
+
 TODOS
 
     Copy service account key into container locally, but without versioning it on git (.gitignore)

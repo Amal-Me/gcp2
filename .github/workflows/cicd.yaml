@@ -37,9 +37,7 @@ jobs:
       runs-on: ubuntu-latest
       # permet d'éviter les race conditions
       needs: push-image-to-gar
-      steps:
-        - uses: actions/checkout@v4
-
+      steps:        
         # cette action me permet de me connecter au GCP en utilisant ma JSON key
         - uses: 'google-github-actions/auth@v2'
           with:
@@ -53,4 +51,5 @@ jobs:
         - name: "update Cloud Run job"
           run: |
             gcloud run jobs deploy screenshotter --image=europe-west1-docker.pkg.dev/helpful-silo-412810/serfa-gcp-tp/serfagcp2:latest --region=europe-west1
-        
+           #
+            

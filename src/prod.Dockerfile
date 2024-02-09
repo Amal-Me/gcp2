@@ -7,6 +7,7 @@ COPY --chown=pptruser:pptruser package*.json ./
 # cette partie est responsable de l'installation des dépendances
 RUN npm ci
 
+#com
 COPY --chown=pptruser:pptruser . .
 
 ENV GOOGLE_APPLICATION_CREDENTIALS="/secrets/web-screenshots-app-sa.json"

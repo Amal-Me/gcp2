@@ -45,12 +45,12 @@ jobs:
           with:
             credentials_json: '${{ secrets.CLOUD_RUN_DEPLOYER_SA_KEY }}'
 
-        # on install le logiciel en ligne de commande `gcloud` sur le runner de GitHub
-          - name: "set up Google Cloud SDK"
-            uses: "google-github-actions/setup-gcloud@v2"
+      # on install le logiciel en ligne de commande `gcloud` sur le runner de GitHub
+        - name: "set up Google Cloud SDK"
+          uses: "google-github-actions/setup-gcloud@v2"
 
-          # j'utilise `gcloud` pour déployer mon job Cloud Run
-          - name: "update Cloud Run job"
-            run: |
-             gcloud run jobs deploy screenshotter --image=europe-west1-docker.pkg.dev/helpful-silo-412810/serfa-gcp-tp/serfagcp2:latest --region=europe-west1
+        # j'utilise `gcloud` pour déployer mon job Cloud Run
+        - name: "update Cloud Run job"
+          run: |
+            gcloud run jobs deploy screenshotter --image=europe-west1-docker.pkg.dev/helpful-silo-412810/serfa-gcp-tp/serfagcp2:latest --region=europe-west1
         
